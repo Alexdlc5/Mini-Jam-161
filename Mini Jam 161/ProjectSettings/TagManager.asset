@@ -5,6 +5,9 @@ TagManager:
   serializedVersion: 2
   tags:
   - Customer
+  - Storage
+  - Shelf
+  - Wall
   layers:
   - Default
   - TransparentFX

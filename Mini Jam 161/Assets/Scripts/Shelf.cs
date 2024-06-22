@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Shelf : MonoBehaviour
 {
-    public bool stocked = false;
+    public bool stocked = true;
     private SpriteRenderer spriteRenderer;
     private void Start()
     {
@@ -13,8 +13,12 @@ public class Shelf : MonoBehaviour
     }
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.tag == "Player" && collision.gameObject.GetComponent<Player_Data>().holding_item == true)
+        if (collision.tag == "Player" && collision.gameObject.GetComponent<Player_Data>().items_held > 0 && stocked == false)
         {
+            Player_Data playerData = collision.gameObject.GetComponent<Player_Data>();
+            playerData.items_held--;
+            playerData.updateIcons();
+            
             stocked = true;
             //set color green
             spriteRenderer.color = new Color(.5f, 1f, .5f, .5f);
