@@ -4,12 +4,16 @@ using UnityEngine;
 
 public class Player_Data : MonoBehaviour
 {
+    public GameObject place;
+    public GameObject pickup;
+
     public int items_held = 0;
     public GameObject[] held_item_icons;
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.gameObject.tag == "Storage")
         {
+            Instantiate(pickup);
             items_held = 3;
             for (int i = 0; i < held_item_icons.Length; i++)
             {
@@ -19,6 +23,7 @@ public class Player_Data : MonoBehaviour
     }
     public void updateIcons()
     {
+        Instantiate(place);
         //all icons disabled
         for (int i = 0; i < held_item_icons.Length; i++)
         {

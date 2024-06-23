@@ -10,10 +10,10 @@ GameObject:
   m_Component:
   - component: {fileID: 5835122362456710767}
   - component: {fileID: 4152047030145887878}
-  - component: {fileID: 492896168475369511}
   - component: {fileID: 7509968969935928546}
   - component: {fileID: 3001126675341576388}
   - component: {fileID: 3431227384114137501}
+  - component: {fileID: 8501754262913527424}
   m_Layer: 0
   m_Name: Customer
   m_TagString: Customer
@@ -89,33 +89,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!50 &492896168475369511
-Rigidbody2D:
-  serializedVersion: 4
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1390265015855530617}
-  m_BodyType: 0
-  m_Simulated: 1
-  m_UseFullKinematicContacts: 0
-  m_UseAutoMass: 0
-  m_Mass: 1
-  m_LinearDrag: 0
-  m_AngularDrag: 0.05
-  m_GravityScale: 0
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_Interpolate: 0
-  m_SleepingMode: 1
-  m_CollisionDetection: 1
-  m_Constraints: 0
 --- !u!114 &7509968969935928546
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -141,10 +114,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: acb958fb68d35e044bf8fe94bad2fee6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  rb: {fileID: 492896168475369511}
+  rb: {fileID: 0}
   speed: 5
   rotation: 90
-  bump_distance: 2
+  bounce: 4
   check: {fileID: 7009190936438423000}
 --- !u!58 &3431227384114137501
 CircleCollider2D:
@@ -181,6 +154,33 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 0.5
+--- !u!50 &8501754262913527424
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1390265015855530617}
+  m_BodyType: 0
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 0
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 1
+  m_Constraints: 4
 --- !u!1 &7429329163171035904
 GameObject:
   m_ObjectHideFlags: 0
