@@ -26,6 +26,6 @@ public class Shelf_Stock_Monitor : MonoBehaviour
         {
             timer += Time.deltaTime;
         }
-        timer_text.text = "TIME OPEN: " + timer;
+        timer_text.text = "TIME: " + timer;
     }
 }
